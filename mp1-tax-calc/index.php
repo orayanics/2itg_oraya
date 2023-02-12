@@ -20,7 +20,8 @@
 
                 <div class="input">
                     <h3>Salary</h3>
-                    <input type="text" name="salary" id="salary" placeholder="Enter your salary here" onkeypress='validate(event)'>
+                    <input type="text" name="salary" id="salary" placeholder="Enter your salary here" onkeypress='validate(event)'
+                    title="You will only be able to enter numbers." required>
                 </div>
 
                 <div class="input">
@@ -42,15 +43,15 @@
                 <button type="submit" name="submit" value="submit">Compute</button>
 
                 <?php
-
+                // $checkInput = $_POST["salary"];
                 $taxAnnual = 0;
                 $taxMonthly = 0;
 
                 if (isset($_POST["submit"])) {
+
                     $taxType = $_POST['type'];
                     $inputSalary = $_POST['salary'];
                     getTypeTax($taxType, $inputSalary);
-                } else {
                 }
 
                 function getTypeTax($type, $salary)
