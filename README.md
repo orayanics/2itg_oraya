@@ -1,1 +1,1 @@
-# This is for ICS2609: MP1 Tax Calculator Web App
+# A repo for 2609 activities and submissions.
