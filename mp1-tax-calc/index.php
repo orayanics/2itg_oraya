@@ -51,6 +51,7 @@
 
                     $taxType = $_POST['type'];
                     $inputSalary = $_POST['salary'];
+                    // $inputSalary = number_format($inputSalary);
                     getTypeTax($taxType, $inputSalary);
                 }
 
@@ -71,8 +72,9 @@
 
                 function annualComputation($salary)
                 {
+                    $tempSalary = number_format($salary, 2);
                     if ($salary <= 250000) {
-                        return $salary;
+                        return sprintf('%0.2f', $salary);
                     } else if ($salary > 250000 && $salary <= 450000) {
                         return ($salary - 250000) * 0.20;
                     } else if ($salary > 400000 && $salary <= 800000) {
@@ -88,9 +90,12 @@
 
                 function printTax($annualSal, $taxAnnual, $taxMonthly)
                 {
-                    echo "<h2>Annual Salary: <span>$annualSal</span></h2>";
-                    echo "<h2>Est. Annual Tax: <span> $taxAnnual </span></h2>";
-                    echo "<h2>Est. Monthly Tax: <span> $taxMonthly </span></h2>";
+                    $annualSal =  sprintf('%0.2f', $annualSal);
+                    $taxAnnual =  sprintf('%0.2f', $taxAnnual);
+                    $taxMonthly =  sprintf('%0.2f', $taxMonthly);
+                    echo "<h2>Annual Salary: PHP <span> $annualSal </span></h2>";
+                    echo "<h2>Est. Annual Tax: PHP <span> $taxAnnual </span></h2>";
+                    echo "<h2>Est. Monthly Tax: PHP <span> $taxMonthly </span></h2>";
                 }
                 ?>
 
