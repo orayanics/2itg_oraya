@@ -36,11 +36,11 @@ body {
 }
 
 .in1 {
-    background-color: #1fc38d;
+    background-color: #ac73d9;
 }
 
 .in2 {
-    background-color: #ee8697;
+    background-color: #1fc38d;
 }
 
 .input h3 {
@@ -135,7 +135,7 @@ form span {
 .logo {
     display: block;
     margin: auto;
-    width: calc(100% - 20%);
+    width: calc(100% - 60%);
 }
 
 @media (max-width: 800px) {

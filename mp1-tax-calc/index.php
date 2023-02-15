@@ -15,7 +15,7 @@
     <div class="main-wrapper">
         <div class="calculator">
             <img class="logo" src="logo.png" alt="">
-            <h2>Quickly compute your tax.</h2>
+            <h2>A tax calculator.</h2>
 
             <form action="" method="post" class="flex">
 
