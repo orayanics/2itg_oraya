@@ -13,7 +13,7 @@
 }
 
 .calculator {
-    width: 75vw;
+    width: 55vw;
     height: auto;
     margin: 5rem auto;
     background-color: #fff;
@@ -99,7 +99,7 @@ button:focus {
     display: flex;
     flex-direction:row;
     width: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 h1, h2 {
@@ -126,4 +126,28 @@ form span {
     border-radius: 15px;
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.logo {
+    display: block;
+    margin: auto;
+    width: calc(100% - 20%);
+}
+
+@media (max-width: 800px) {
+    h2 {
+        font-size: 16px;
+    }
+    .calculator {
+        width: 75vw;
+    }
+
+    .radio-type {
+        flex-direction: column;
+    }
+
+    button {
+        padding: 0;
+    }
+
 }

@@ -14,13 +14,14 @@
 <body>
     <div class="main-wrapper">
         <div class="calculator">
-            <h1>A Tax Calculator</h1>
+            <img class="logo" src="logo.png" alt="">
+            <h2>Quickly compute your tax.</h2>
 
             <form action="" method="post" class="flex">
 
                 <div class="input in1">
                     <h3>Salary</h3>
-                    <input type="text" name="salary" id="salary" placeholder="Enter your salary here" onkeypress='validate(event)'
+                    <input type="text" name="salary" id="salary" placeholder="Enter salary here" onkeypress='validate(event)'
                     title="You will only be able to enter numbers." required>
                 </div>
 
