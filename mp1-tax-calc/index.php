@@ -18,13 +18,13 @@
 
             <form action="" method="post" class="flex">
 
-                <div class="input">
+                <div class="input in1">
                     <h3>Salary</h3>
                     <input type="text" name="salary" id="salary" placeholder="Enter your salary here" onkeypress='validate(event)'
                     title="You will only be able to enter numbers." required>
                 </div>
 
-                <div class="input">
+                <div class="input in2">
                     <h3>Type</h3>
                     <div class="radio-type">
                         <div>
@@ -51,7 +51,6 @@
 
                     $taxType = $_POST['type'];
                     $inputSalary = $_POST['salary'];
-                    // $inputSalary = number_format($inputSalary);
                     getTypeTax($taxType, $inputSalary);
                 }
 
@@ -93,9 +92,12 @@
                     $annualSal =  sprintf('%0.2f', $annualSal);
                     $taxAnnual =  sprintf('%0.2f', $taxAnnual);
                     $taxMonthly =  sprintf('%0.2f', $taxMonthly);
-                    echo "<h2>Annual Salary: PHP <span> $annualSal </span></h2>";
-                    echo "<h2>Est. Annual Tax: PHP <span> $taxAnnual </span></h2>";
-                    echo "<h2>Est. Monthly Tax: PHP <span> $taxMonthly </span></h2>";
+                    echo '<div class="computed">';
+                    echo "<p>We have computed the following for you.</p>";
+                    echo "<p>Annual Salary: <span> PHP  $annualSal </span></p>";
+                    echo "<p>Est. Annual Tax: <span>  PHP $taxAnnual </span></p>";
+                    echo "<p>Est. Monthly Tax: <span> PHP  $taxMonthly </span></p>";
+                    echo '</div>';
                 }
                 ?>
 
